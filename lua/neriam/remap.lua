@@ -21,3 +21,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Get to explore pane quickly
 vim.keymap.set({'n', 'v'}, '<leader>pe', vim.cmd.Ex)
+
+-- Personal git shortcuts
+vim.keymap.set({'n', 'v'}, '<leader>gd', '<leader><Cmd>Gvdiffsplit<CR>', { desc = 'Open [g]it [d]iff view of current file.'})
