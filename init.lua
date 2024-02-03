@@ -216,6 +216,12 @@ require('lazy').setup({
     end,
   },
 
+  -- For Java support
+  -- https://github.com/mfussenegger/nvim-jdtls/tree/master?tab=readme-ov-file#nvim-jdtls
+  {
+    'mfussenegger/nvim-jdtls'
+  },
+
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
   -- require 'kickstart.plugins.autoformat',
