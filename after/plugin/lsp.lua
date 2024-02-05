@@ -81,6 +81,9 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  tailwindcss = {
+    filetypes = { 'javascript', 'typescript' }
+  }
 }
 
 -- Setup neovim lua configuration
