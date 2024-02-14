@@ -222,9 +222,35 @@ require('lazy').setup({
     'mfussenegger/nvim-jdtls'
   },
 
+  -- Debugger adapter client
+  {
+    'mfussenegger/nvim-dap'
+  },
+
+  {
+    'nvim-neorg/neorg',
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {},  -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.dirman"] = {      -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                notes = "~/notes/interviews",
+              },
+            },
+          },
+        },
+      }
+    end,
+  },
+
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
+  require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
   {},
 }, {})
