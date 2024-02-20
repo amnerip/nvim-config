@@ -248,6 +248,27 @@ require('lazy').setup({
     end,
   },
 
+  -- Lua
+  {
+    "folke/zen-mode.nvim",
+    dependencies = { "folke/twilight.nvim" },
+    opts = {
+      window = {
+        width = 75,
+        height = 0.95,
+        options = {
+          number = false,
+          relativenumber = false,
+        }
+      },
+      plugins = {
+        twilight = {
+          enabled = true,
+        }
+      }
+    },
+  },
+
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
   require 'kickstart.plugins.autoformat',
