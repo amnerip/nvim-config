@@ -6,7 +6,7 @@ vim.g.maplocalleader = ' '
 
 -- [[ Custom options ]]
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 vim.opt.cursorline = true
 vim.opt.showmatch = true
 --
@@ -30,6 +30,7 @@ vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.o.breakindent = true
+vim.o.linebreak = true
 
 -- Save undo history
 vim.o.undofile = true
