@@ -77,7 +77,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -172,7 +172,7 @@ require('lazy').setup({
   },
 
   -- Better markdown lists UX
-  'dkarter/bullets.vim',
+  -- 'dkarter/bullets.vim',
 
   -- Extended config for texlab plugin.
   {
@@ -234,15 +234,22 @@ require('lazy').setup({
     config = function()
       require("neorg").setup {
         load = {
-          ["core.defaults"] = {},  -- Loads default behaviour
-          ["core.concealer"] = {}, -- Adds pretty icons to your documents
-          ["core.dirman"] = {      -- Manages Neorg workspaces
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {
+            config = {
+              folds = true,
+            },
+          },                  -- Adds pretty icons to your documents
+          ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
               workspaces = {
-                notes = "~/notes/interviews",
+                notes = "~/notes",
+                gtd = "~/gtd"
               },
             },
           },
+          ["core.ui.calendar"] = {},
+          ["core.summary"] = {},
         },
       }
     end,
@@ -254,7 +261,7 @@ require('lazy').setup({
     dependencies = { "folke/twilight.nvim" },
     opts = {
       window = {
-        width = 75,
+        width = 85,
         height = 0.95,
         options = {
           number = false,
@@ -263,7 +270,7 @@ require('lazy').setup({
       },
       plugins = {
         twilight = {
-          enabled = true,
+          enabled = false,
         }
       }
     },
